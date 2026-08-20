@@ -1,0 +1,222 @@
+.page {
+  padding: 20px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 卡片 */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+.cardTitle {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.cardDesc {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: var(--text-weak);
+  line-height: 1.6;
+}
+
+/* 输入与按钮 */
+.input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 13px;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: var(--ring);
+}
+.btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary-grad);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 17px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(61, 108, 240, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  box-shadow: 0 6px 16px rgba(61, 108, 240, 0.4);
+}
+.btnGhost {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 17px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.btnGhost:hover {
+  border-color: var(--primary);
+  background: var(--primary-weak);
+}
+.btnDanger {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--danger);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 17px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.btnDanger:hover {
+  border-color: var(--danger);
+  background: rgba(229, 72, 77, 0.08);
+}
+
+/* 加入行 */
+.joinRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* 房间表格 */
+.tableWrap {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-weak);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.thCenter {
+  text-align: center;
+}
+.thAction {
+  text-align: right;
+}
+.row {
+  transition: background 0.15s ease;
+}
+.row:hover {
+  background: var(--bg);
+}
+.rowActive {
+  background: var(--primary-weak);
+}
+.rowActive:hover {
+  background: var(--primary-weak);
+}
+.td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+.tdCenter {
+  text-align: center;
+}
+.tdAction {
+  text-align: right;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.roomName {
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.roomId {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  font-size: 12px;
+  color: var(--text-weak);
+  word-break: break-all;
+}
+.lastActive {
+  color: var(--text-weak);
+  white-space: nowrap;
+}
+.tagCurrent {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+.tagJoined {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-weak);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+.deviceCount {
+  font-size: 12px;
+  color: var(--text-weak);
+  white-space: nowrap;
+}
+.deviceCountOn {
+  color: #30a46c;
+  font-weight: 600;
+}
+.roomActions {
+  display: inline-flex;
+  gap: 6px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+.roomActions .btn,
+.roomActions .btnGhost,
+.roomActions .btnDanger {
+  padding: 5px 12px;
+  font-size: 12px;
+}
+.empty {
+  padding: 28px 0;
+  text-align: center;
+  color: var(--text-weak);
+  font-size: 13px;
+}

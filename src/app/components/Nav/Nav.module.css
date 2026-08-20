@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.item {
+  font: inherit;
+  font-size: 13px;
+  padding: 5px 12px;
+  color: var(--text-weak);
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.item:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+.active {
+  color: var(--primary);
+  background: var(--primary-weak);
+  font-weight: 600;
+}

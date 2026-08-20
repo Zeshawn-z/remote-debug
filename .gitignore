@@ -1,9 +1,11 @@
 node_modules
 dist
 public
+logs
 devtools/.cipd
 devtools/devtools-frontend
 devtools/.gclient_entries
 devtools/.gclient_previous_sync_commits
-script/lib/__pycache__
+.codebuddy
+.DS_Store
 package-lock.json

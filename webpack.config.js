@@ -4,7 +4,8 @@ module.exports = (env, argv) => {
   const config = {
     target: ['web', 'es5'],
     entry: {
-      index: './src/index.ts',
+      index: './src/index.tsx',
+      bind: './src/bind.ts',
       target: {
         import: './src/target.ts',
         library: {
@@ -19,12 +20,12 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'public'),
     },
     resolve: {
-      extensions: ['.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js'],
     },
     module: {
       rules: [
         {
-          test: /\.ts$/,
+          test: /\.tsx?$/,
           loader: 'ts-loader',
         },
         {
@@ -32,7 +33,22 @@ module.exports = (env, argv) => {
           loader: 'svg-url-loader',
         },
         {
+          test: /\.module\.css$/i,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: '[name]__[local]--[hash:base64:5]',
+                },
+              },
+            },
+          ],
+        },
+        {
           test: /\.css$/i,
+          exclude: /\.module\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
       ],

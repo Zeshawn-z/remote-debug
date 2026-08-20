@@ -1,0 +1,244 @@
+/* settings 各区块共用样式 */
+.section {
+  padding: 16px;
+}
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.h2 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.desc {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-weak);
+  line-height: 1.6;
+  max-width: 760px;
+}
+.desc code {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  background: var(--primary-weak);
+  border-radius: 3px;
+  padding: 0 4px;
+}
+.addBtn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary-grad);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(61, 108, 240, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.addBtn:hover {
+  box-shadow: 0 6px 16px rgba(61, 108, 240, 0.4);
+}
+.empty {
+  padding: 24px 0;
+  text-align: center;
+  color: var(--text-weak);
+  font-size: 13px;
+}
+
+/* 表格 */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+  margin-top: 8px;
+}
+.th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-weak);
+  background: var(--surface-2);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.thEnabled {
+  width: 60px;
+  text-align: center;
+}
+.thAction {
+  width: 200px;
+  text-align: center;
+}
+.row {
+  transition: background 0.15s;
+}
+.row:hover {
+  background: var(--primary-weak);
+}
+.td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.tdEnabled {
+  text-align: center;
+}
+.tdAction {
+  text-align: center;
+  white-space: nowrap;
+}
+.input {
+  width: 100%;
+  font: inherit;
+  font-size: 12px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: var(--ring);
+}
+.iconBtn {
+  font: inherit;
+  font-size: 12px;
+  background: transparent;
+  color: var(--text-weak);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 3px 8px;
+  cursor: pointer;
+  margin: 0 2px;
+}
+.iconBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.iconBtn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.deleteBtn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--danger);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  border-color: var(--danger);
+  background: rgba(229, 72, 77, 0.06);
+}
+
+/* 开关 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  vertical-align: middle;
+}
+.switchInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.switchInlineLabel {
+  font-size: 12px;
+  color: var(--text-weak);
+  font-weight: 500;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  inset: 0;
+  background: var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s;
+}
+.switch input:checked + .slider {
+  background: var(--primary);
+}
+.switch input:checked + .slider::before {
+  transform: translateX(14px);
+}
+
+/* 测试 URL */
+.testBox {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.testLabel {
+  color: var(--text-weak);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.testBox .input {
+  flex: 1;
+  max-width: 480px;
+}
+.testHit {
+  color: var(--text);
+}
+.testHit strong {
+  color: var(--primary);
+}
+.testPattern {
+  color: var(--text-weak);
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+}
+.testMiss {
+  color: var(--text-weak);
+}
+
+/* 连接日志工具区 */
+.connLogTools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,56 @@
+.trigger {
+  cursor: default;
+}
+
+.popup {
+  position: fixed;
+  z-index: 99999;
+  min-width: 300px;
+  max-width: 480px;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.devId {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  word-break: break-all;
+}
+.devMeta {
+  font-size: 12px;
+  color: var(--primary);
+}
+.devUa {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  font-size: 11px;
+  color: var(--text-weak);
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.empty {
+  font-size: 13px;
+  color: var(--text-weak);
+}

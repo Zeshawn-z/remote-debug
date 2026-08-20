@@ -49,6 +49,7 @@ if (cdn && endWith(cdn, '/')) {
 
 const sessionStore = safeStorage('session');
 
+// 存 sessionStorage 而非 localStorage，让同一个 tab 刷新后复用 id，新开标签页则重新分配
 let id = sessionStore.getItem('chii-id');
 if (!id) {
   id = randomId(6);

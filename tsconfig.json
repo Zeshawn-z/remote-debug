@@ -2,13 +2,15 @@
   "compilerOptions": {
     "strict": true,
     "module": "commonjs",
+    "moduleResolution": "node",
     "strictPropertyInitialization": false,
     "removeComments": true,
     "noUnusedLocals": true,
     "target": "ES5",
+    "jsx": "react-jsx",
     "sourceMap": true,
     "esModuleInterop": true,
-    "lib": ["DOM", "ES2015"]
+    "lib": ["DOM", "DOM.Iterable", "ES2015"]
   },
   "include": ["src/**/*"]
 }

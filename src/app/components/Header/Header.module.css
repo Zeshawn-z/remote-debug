@@ -1,0 +1,41 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.headerInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo {
+  flex-shrink: 0;
+  border-radius: 7px;
+}
+.brandName {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+.badge {
+  font-size: 11px;
+  color: var(--primary);
+  background: var(--primary-weak);
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.spacer {
+  flex: 1;
+}

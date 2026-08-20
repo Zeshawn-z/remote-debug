@@ -1,0 +1,99 @@
+:root {
+  /* 底色与表面 */
+  --bg: #f5f6f8;
+  --bg-soft: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #fafbfc;
+  --border: #e6e8eb;
+  --border-strong: #d8dbe0;
+
+  /* 文本 */
+  --text: #1f2329;
+  --text-weak: #8a9099;
+
+  /* 主题色 */
+  --primary: #1966d2;
+  --primary-hover: #1558b8;
+  --primary-weak: rgba(25, 102, 210, 0.1);
+  --primary-grad: #1966d2;
+  --accent: #1966d2;
+
+  /* 状态色 */
+  --success: #389e0d;
+  --warning: #d98a00;
+  --danger: #cf1322;
+
+  /* 阴影分层 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 6px 24px rgba(0, 0, 0, 0.12);
+  --ring: 0 0 0 2px var(--primary-weak);
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 12px;
+
+  /* 早期风格不做半透明，保持与 surface 一致 */
+  --glass: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 13px;
+  min-width: 320px;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: var(--primary-weak);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #202124;
+    --bg-soft: #202124;
+    --surface: #292a2d;
+    --surface-2: #2f3033;
+    --border: #3c4043;
+    --border-strong: #4a4e54;
+    --text: #e3e3e3;
+    --text-weak: #9aa0a6;
+    --primary: #8ab4f8;
+    --primary-hover: #a3c5fa;
+    --primary-weak: rgba(138, 180, 248, 0.12);
+    --primary-grad: #8ab4f8;
+    --accent: #8ab4f8;
+    --success: #6cc24a;
+    --warning: #e2a13a;
+    --danger: #ff6166;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 6px 24px rgba(0, 0, 0, 0.5);
+    --glass: #292a2d;
+  }
+}

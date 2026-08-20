@@ -1,0 +1,229 @@
+.tableWrap {
+  width: 100%;
+  overflow: auto;
+  max-height: calc(100vh - 160px);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: fixed;
+}
+.th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-weak);
+  background: var(--surface);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+.thAction {
+  text-align: center;
+  width: 210px;
+}
+.row {
+  transition: background 0.15s;
+}
+.row:hover {
+  background: var(--primary-weak);
+}
+.td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  max-width: 0;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+.titleInner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+}
+.titleInner .ellipsis {
+  min-width: 0;
+}
+.titleFull {
+  min-width: 0;
+  white-space: normal;
+  word-break: break-all;
+}
+.shotDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3b82f6;
+  flex-shrink: 0;
+  cursor: help;
+}
+/* 仅活跃会话的标题可点击，整块作为 inspect 入口 */
+.titleClickable {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.titleClickable:hover {
+  color: var(--primary);
+}
+.favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.badgeActive {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: #30a46c;
+  border-radius: 4px;
+  padding: 1px 5px;
+  flex-shrink: 0;
+  transition: filter 0.15s;
+}
+.titleClickable:hover .badgeActive {
+  filter: brightness(1.1);
+}
+.url {
+  color: var(--primary);
+  display: block;
+}
+.ua {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-weak);
+}
+.osIcon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0.85;
+  object-fit: contain;
+}
+.timeCell {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.duration {
+    width: 70px;
+}
+.colTime {
+  width: 120px;
+}
+.mark {
+  display: inline-block;
+  max-width: 100%;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--primary-weak);
+  color: var(--primary);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.colUa {
+  width: 180px;
+}
+.colUid {
+  width: 180px;
+}
+.tdWrap {
+  white-space: normal;
+  word-break: break-all;
+}
+.muted {
+  color: var(--text-weak);
+}
+.tdAction {
+  text-align: center;
+  white-space: nowrap;
+}
+.logCount {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  font-size: 12px;
+  color: var(--text-weak);
+  margin-right: 8px;
+}
+.logsBtn,
+.detailBtn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.detailBtn {
+  margin-left: 6px;
+}
+.logsBtn:hover,
+.detailBtn:hover {
+  border-color: var(--primary);
+}
+.inspectBtn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  padding: 5px 14px;
+  margin-left: 6px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.inspectBtn:hover {
+  opacity: 0.85;
+}
+.deleteBtn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e5484d;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  margin-left: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.deleteBtn:hover {
+  border-color: #e5484d;
+  background: rgba(229, 72, 77, 0.06);
+}
+.deleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.empty {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--text-weak);
+}

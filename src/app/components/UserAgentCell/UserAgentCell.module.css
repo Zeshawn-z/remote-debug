@@ -1,0 +1,39 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-weak);
+}
+.osIcon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0.85;
+  object-fit: contain;
+}
+.label {
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.full {
+  flex: 1;
+  color: var(--text-weak);
+  word-break: break-all;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.toggle {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 11px;
+  color: var(--primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.toggle:hover {
+  text-decoration: underline;
+}
